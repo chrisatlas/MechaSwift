@@ -36,3 +36,12 @@ module.exports = (robot) ->
   
   robot.respond /doge me (.*)$/i, (msg) ->
     msg.send msg.random(["much ","such ","very ", "many "]) + msg.match[1]
+    
+  robot.respond /superdoge me (.*)$/i, (msg) ->
+    msgArr = msg.match[1].split(" ")
+    response = undefined
+    i = 0
+    while i < msgArr.length
+      response += msg.random(["much ", "such ", "very ", "many "]) + msgArr[i]
+      i++
+    msg.send response + " wow"
