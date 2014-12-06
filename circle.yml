@@ -1,3 +1,6 @@
+notify:
+  webhooks:
+    - url: https://webhooks.gitter.im/e/c643224c00931e7ba9cf
 deployment:
   production:
     branch: master
