@@ -46,3 +46,6 @@ module.exports = (robot) ->
       response += msg.random(["much ", "such ", "very ", "many "]) + msgArr[i] + ", "
       i++
     msg.send response + "wow"
+  
+  robot.respond /rickroll$/i, (msg) ->
+  	msg.send "http://www.youtube.com/watch?v=4zKshWnI3ok&feature=youtube_gdata" 
