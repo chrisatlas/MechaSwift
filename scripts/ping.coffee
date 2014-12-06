@@ -9,6 +9,7 @@
 #   hubot die - End hubot process
 #   hubot Ari? - Reply with Ari.
 #   hubot doge me <text> - Reply with <doge word> <text>
+#   hubot superdoge me <text goes here> - Dogeify your sentences.
 
 module.exports = (robot) ->
   robot.respond /PING$/i, (msg) ->
@@ -39,9 +40,9 @@ module.exports = (robot) ->
     
   robot.respond /superdoge me (.*)$/i, (msg) ->
     msgArr = msg.match[1].split(" ")
-    response = undefined
+    response = ""
     i = 0
     while i < msgArr.length
-      response += msg.random(["much ", "such ", "very ", "many "]) + msgArr[i]
+      response += msg.random(["much ", "such ", "very ", "many "]) + msgArr[i] + ", "
       i++
-    msg.send response + " wow"
+    msg.send response + "wow"
