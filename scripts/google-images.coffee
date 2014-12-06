@@ -7,6 +7,7 @@
 #   hubot mustache me <url> - Adds a mustache to the specified URL.
 #   hubot mustache me <query> - Searches Google Images for the specified query and mustaches it.
 #   hubot grumpy cat - Provides a grumpy cat image.
+#   hubot doge - Provides much doge very image.
 #   hubot wat - Provides a WAT image.
 
 module.exports = (robot) ->
@@ -35,6 +36,10 @@ module.exports = (robot) ->
   
   robot.respond /grumpy cat/i, (msg) ->
     imageMe msg, "grumpy cat", false, (url) ->
+      msg.send url
+  
+  robot.respond /doge/i, (msg) ->
+    imageMe msg, "doge", false, (url) ->
       msg.send url
 
 imageMe = (msg, query, animated, faces, cb) ->
