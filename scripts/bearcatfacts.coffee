@@ -1,3 +1,6 @@
+# Commands:
+# hubot bearcat - Responds with a bearcat fact.
+
 module.exports = (robot) ->
   robot.respond /BEARCAT/i, (msg) ->
     msg.http('http://bearcatfacts.info/')
