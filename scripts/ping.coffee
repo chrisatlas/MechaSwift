@@ -7,6 +7,7 @@
 #   hubot time - Reply with current time
 #   hubot Alan - Reply with STEVE!!!
 #   hubot die - End hubot process
+#   hubot Ari? - Reply with Ari.
 
 module.exports = (robot) ->
   robot.respond /PING$/i, (msg) ->
@@ -25,7 +26,9 @@ module.exports = (robot) ->
 
   robot.respond /TIME$/i, (msg) ->
     msg.send "Server time is: #{new Date()}"
+    
   robot.respond /Ari(\?)$/i, (msg) ->
     msg.send "Ari."
+    
   robot.respond /Alan$/i, (msg) ->
   	msg.send "Steve!!" for x in [1..5]
