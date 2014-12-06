@@ -32,3 +32,6 @@ module.exports = (robot) ->
     
   robot.respond /Alan$/i, (msg) ->
   	msg.send "Steve!!" for x in [1..5]
+  
+  robot.respond /doge me (.*)$/i, (msg) ->
+    msg.send msg.random(["much ","such ","very ", "many "]) + msg.match[1]
